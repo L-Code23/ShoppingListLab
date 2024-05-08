@@ -78,19 +78,29 @@ while (true)
     {
         break;
     }
+    else if( addMore == "y") 
+    {
+        continue;
+    }
+    else
+    {
+        Console.WriteLine("Invalid Entry. Please enter y/n.");
+    }
 }
-    Console.WriteLine($"Item\t    Price");
-foreach (string i in ShoppingList)
-{
+    Console.WriteLine($"{"Item",0} {"Price",10}");
+    foreach (string i in ShoppingList)
+    {
     
-    Console.WriteLine($"{i}      ${GroceryInventory[i]}");// {i} represents items in list created by user input {GroceryInventory[i]} reperesents the prices from original list
-    
+    Console.WriteLine($"{i,0} {GroceryInventory[i],10}");// {i} represents items in list created by user input {GroceryInventory[i]} reperesents the prices from original list
 
-    //Console.WriteLine($" Here is the sum of your order: {ShoppingTotal}");
-    //break;
+
+    
 }
-static decimal ShoppingTotal(decimal GroceryInventory)
+    Console.WriteLine($" Here is the sum of your order: {ShoppingTotal}");
+    
+static decimal ShoppingTotal(decimal ShoppingList, decimal GroceryInventory)
 {
-    return GroceryInventory;
+    decimal total = 0;
+    return total +=GroceryInventory;
     
 }
